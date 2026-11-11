@@ -1,1 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ec4899"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient><radialGradient id="bg" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#ec4899" stop-opacity=".35"/><stop offset="1" stop-color="#0b0b12" stop-opacity="0"/></radialGradient></defs><rect width="600" height="600" fill="#111118"/><rect width="600" height="600" fill="url(#bg)"/><rect x="190" y="70" width="220" height="460" rx="36" fill="#1c1c24" stroke="#33333f" stroke-width="4"/><rect x="202" y="82" width="196" height="436" rx="28" fill="url(#g)"/><rect x="262" y="96" width="76" height="18" rx="9" fill="#0b0b12"/><circle cx="300" cy="300" r="60" fill="#fff" fill-opacity=".15"/><circle cx="300" cy="300" r="34" fill="#fff" fill-opacity=".25"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <defs>
+    <radialGradient id="bg" cx=".5" cy=".42" r=".75"><stop offset="0" stop-color="#1d1d26"/><stop offset="1" stop-color="#09090d"/></radialGradient>
+    <radialGradient id="halo" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#a07ae6" stop-opacity=".45"/><stop offset="1" stop-color="#a07ae6" stop-opacity="0"/></radialGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a6cc4"/><stop offset="1" stop-color="#4e3685"/></linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="1" y2="0.6"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset=".35" stop-color="#fff" stop-opacity=".04"/><stop offset=".7" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".18"/></linearGradient>
+    <linearGradient id="frameSheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".5" stop-color="#000" stop-opacity=".15"/><stop offset="1" stop-color="#fff" stop-opacity=".25"/></linearGradient>
+    <linearGradient id="bump" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a6cc4"/><stop offset="1" stop-color="#4e3685"/></linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8e8ec"/><stop offset=".5" stop-color="#6d6d75"/><stop offset="1" stop-color="#cfcfd6"/></linearGradient>
+    <radialGradient id="glass" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#2c3550"/><stop offset=".6" stop-color="#0d1020"/><stop offset="1" stop-color="#05060a"/></radialGradient>
+    <radialGradient id="iris" cx=".4" cy=".4" r=".7"><stop offset="0" stop-color="#4b5fa8"/><stop offset=".6" stop-color="#1c2448"/><stop offset="1" stop-color="#0a0d1c"/></radialGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="#1d1240"/><stop offset=".6" stop-color="#7b3fd0"/><stop offset="1" stop-color="#f0a6ff"/></linearGradient>
+    <radialGradient id="blob" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f0a6ff" stop-opacity=".7"/><stop offset="1" stop-color="#f0a6ff" stop-opacity="0"/></radialGradient>
+    <radialGradient id="shadow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#000" stop-opacity=".7"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+    <filter id="drop" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#000" flood-opacity=".55"/></filter>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#bg)"/>
+  <circle cx="500" cy="470" r="420" fill="url(#halo)"/>
+  <ellipse cx="500" cy="905" rx="380" ry="34" fill="url(#shadow)"/>
+  <g filter="url(#drop)" transform="translate(170 175) rotate(-9 165 340)"><g>
+    <rect x="-6" y="-6" width="342" height="692" rx="46" fill="#7a62ad"/>
+    <rect x="-6" y="-6" width="342" height="692" rx="46" fill="url(#frameSheen)"/>
+    <rect x="0" y="0" width="330" height="680" rx="40" fill="url(#body)"/>
+    <rect x="0" y="0" width="330" height="680" rx="40" fill="url(#gloss)"/>
+    <rect x="22" y="22" width="132" height="200" rx="32" fill="url(#bump)" stroke="#ffffff22" stroke-width="2"/>
+      
+  <circle cx="70" cy="72" r="39" fill="url(#ring)" />
+  <circle cx="70" cy="72" r="34" fill="#0b0c10" />
+  <circle cx="70" cy="72" r="32" fill="url(#glass)" />
+  <circle cx="70" cy="72" r="17.6" fill="#05060a" />
+  <circle cx="70" cy="72" r="10.24" fill="url(#iris)" />
+  <ellipse cx="60.4" cy="60.8" rx="7.04" ry="4.16" fill="#fff" opacity=".55" transform="rotate(-35 60.4 60.8)"/>
+  <circle cx="70" cy="160" r="31" fill="url(#ring)" />
+  <circle cx="70" cy="160" r="26" fill="#0b0c10" />
+  <circle cx="70" cy="160" r="24" fill="url(#glass)" />
+  <circle cx="70" cy="160" r="13.200000000000001" fill="#05060a" />
+  <circle cx="70" cy="160" r="7.68" fill="url(#iris)" />
+  <ellipse cx="62.8" cy="151.6" rx="5.28" ry="3.12" fill="#fff" opacity=".55" transform="rotate(-35 62.8 151.6)"/>
+  <circle cx="126" cy="52" r="19" fill="url(#ring)" />
+  <circle cx="126" cy="52" r="14" fill="#0b0c10" />
+  <circle cx="126" cy="52" r="12" fill="url(#glass)" />
+  <circle cx="126" cy="52" r="6.6000000000000005" fill="#05060a" />
+  <circle cx="126" cy="52" r="3.84" fill="url(#iris)" />
+  <ellipse cx="122.4" cy="47.8" rx="2.64" ry="1.56" fill="#fff" opacity=".55" transform="rotate(-35 122.4 47.8)"/><circle cx="126" cy="92" r="8" fill="#f3e9c6" stroke="#9a9384" stroke-width="2"/><circle cx="126" cy="92" r="4" fill="#fffbe8"/>
+    <rect x="334" y="170" width="5" height="70" rx="2.5" fill="#7a62ad" />
+    <rect x="334" y="260" width="5" height="44" rx="2.5" fill="#7a62ad" />
+  </g></g>
+  <g filter="url(#drop)" transform="translate(495 150) rotate(5 165 340)"><g>
+    <rect x="-6" y="-6" width="342" height="692" rx="46" fill="#7a62ad"/>
+    <rect x="-6" y="-6" width="342" height="692" rx="46" fill="url(#frameSheen)"/>
+    <rect x="0" y="0" width="330" height="680" rx="40" fill="#050507"/>
+    <rect x="9" y="9" width="312" height="662" rx="31" fill="url(#wall)"/>
+    <circle cx="82.5" cy="475.99999999999994" r="190" fill="url(#blob)" opacity=".8"/>
+    <rect x="9" y="9" width="312" height="662" rx="31" fill="none" stroke="#000" stroke-opacity=".4"/>
+    <text x="165" y="170" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="74" font-weight="300" fill="#fff" opacity=".95">9:41</text>
+    <text x="165" y="112" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#fff" opacity=".8">Monday, 11 November</text>
+    <circle cx="165" cy="38" r="11" fill="#000"/><circle cx="165" cy="38" r="5" fill="#141826"/>
+    <rect x="115" y="654" width="100" height="5" rx="2.5" fill="#fff" opacity=".7"/>
+    <path d="M9 40 Q9 9 40 9 L181.50000000000003 9 L9 306 Z" fill="#fff" opacity=".06"/>
+  </g></g>
+</svg>
