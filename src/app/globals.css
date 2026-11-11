@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #08080c;
+  --foreground: #ededf2;
 }
 
 @theme inline {
@@ -12,15 +12,27 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { color-scheme: dark; }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+@utility input {
+  @apply w-full rounded-xl border border-white/10 bg-white/5 px-3.5 py-2.5 text-sm text-white placeholder:text-zinc-500 outline-none transition focus:border-violet-500 focus:ring-2 focus:ring-violet-500/30;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition disabled:opacity-50;
+}
+@utility btn-primary { @apply btn bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:brightness-110; }
+@utility btn-ghost { @apply btn border border-white/10 bg-white/5 text-zinc-200 hover:bg-white/10; }
+@utility btn-danger { @apply btn bg-red-600/90 text-white hover:bg-red-600; }
+@utility card { @apply rounded-2xl border border-white/10 bg-white/[0.03]; }
+@utility label { @apply mb-1.5 block text-xs font-medium uppercase tracking-wide text-zinc-400; }
