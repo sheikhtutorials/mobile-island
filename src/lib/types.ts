@@ -62,3 +62,20 @@ export type Banner = {
   sort_order: number;
   is_active: boolean;
 };
+
+export type CartItem = { id: string; slug: string; name: string; price: number; image: string | null; qty: number };
+
+export type OrderStatus = "new" | "confirmed" | "delivered" | "cancelled";
+export type Order = {
+  id: string;
+  order_no: number;
+  customer_name: string;
+  phone: string;
+  city: string | null;
+  address: string;
+  notes: string | null;
+  items: { product_id: string; name: string; price: number; qty: number; image: string | null }[];
+  total: number;
+  status: OrderStatus;
+  created_at: string;
+};

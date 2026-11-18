@@ -2,6 +2,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 import { BottomNav } from "@/components/site/BottomNav";
+import { CartProvider } from "@/components/site/CartProvider";
 import { getSettings } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
@@ -9,7 +10,7 @@ export const dynamic = "force-dynamic";
 export default async function SiteLayout({ children }: LayoutProps<"/">) {
   const settings = await getSettings();
   return (
-    <>
+    <CartProvider>
       <Header settings={settings} />
       <main className="flex-1">{children}</main>
       <Footer settings={settings} />
@@ -17,6 +18,6 @@ export default async function SiteLayout({ children }: LayoutProps<"/">) {
       <div className="h-[calc(4.5rem+env(safe-area-inset-bottom))] md:hidden" />
       <WhatsAppFab settings={settings} />
       <BottomNav settings={settings} />
-    </>
+    </CartProvider>
   );
 }

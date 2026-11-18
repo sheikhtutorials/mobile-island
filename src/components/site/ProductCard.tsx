@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Product } from "@/lib/types";
 import { formatPrice, STOCK_LABELS } from "@/lib/utils";
+import { AddToCartButton } from "./AddToCartButton";
 
 export function ProductCard({ product, currency }: { product: Product; currency: string }) {
   const stock = STOCK_LABELS[product.stock_status];
@@ -30,8 +31,13 @@ export function ProductCard({ product, currency }: { product: Product; currency:
         {product.brand && <p className="text-[11px] font-medium uppercase tracking-wider text-brand-400">{product.brand.name}</p>}
         <h3 className="mt-0.5 line-clamp-2 text-sm font-semibold leading-snug sm:text-base">{product.name}</h3>
         <div className="mt-auto pt-3">
-          <p className="text-base font-bold sm:text-lg">{formatPrice(product.price, currency)}</p>
-          {off > 0 && <p className="text-xs text-zinc-500 line-through">{formatPrice(product.compare_price, currency)}</p>}
+          <div className="flex items-end justify-between gap-2">
+            <div className="min-w-0">
+              <p className="text-base font-bold sm:text-lg">{formatPrice(product.price, currency)}</p>
+              {off > 0 && <p className="text-xs text-zinc-500 line-through">{formatPrice(product.compare_price, currency)}</p>}
+            </div>
+            <AddToCartButton product={product} variant="icon" />
+          </div>
           <span className={`mt-2 inline-block rounded-md px-2 py-0.5 text-[11px] font-medium ring-1 ${stock.cls}`}>{stock.label}</span>
         </div>
       </div>

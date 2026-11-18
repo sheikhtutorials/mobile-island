@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X, Search } from "lucide-react";
 import type { Settings } from "@/lib/types";
+import { CartLink } from "./CartLink";
 
 const NAV = [
   { href: "/", label: "Home" },
@@ -48,6 +49,7 @@ export function Header({ settings }: { settings: Settings | null }) {
           <Link href="/products" aria-label="Search products" className="rounded-lg p-2 text-zinc-300 hover:bg-white/10">
             <Search className="h-5 w-5" />
           </Link>
+          <CartLink className="rounded-lg p-2 text-zinc-300 hover:bg-white/10" />
           <button
             className="rounded-lg p-2 text-zinc-300 hover:bg-white/10 md:hidden"
             onClick={() => setOpen((o) => !o)}

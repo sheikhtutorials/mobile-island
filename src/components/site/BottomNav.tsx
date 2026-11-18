@@ -2,16 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Smartphone, Info, MapPin } from "lucide-react";
+import { Home, Smartphone, ShoppingCart, MapPin } from "lucide-react";
 import type { Settings } from "@/lib/types";
 import { whatsappLink } from "@/lib/utils";
 import { WhatsAppIcon } from "./Icons";
+import { CartLink } from "./CartLink";
 
 const ITEMS = [
   { href: "/", label: "Home", Icon: Home },
   { href: "/products", label: "Phones", Icon: Smartphone },
   null, // WhatsApp slot
-  { href: "/about", label: "About", Icon: Info },
+  { href: "/cart", label: "Cart", Icon: ShoppingCart },
   { href: "/contact", label: "Contact", Icon: MapPin },
 ];
 
@@ -42,6 +43,16 @@ export function BottomNav({ settings }: { settings: Settings | null }) {
               </div>
             );
           const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+          if (item.href === "/cart")
+            return (
+              <CartLink
+                key={i}
+                label="Cart"
+                className={`flex flex-col items-center justify-center gap-1 text-[11px] font-medium transition active:scale-95 ${
+                  active ? "text-brand-400" : "text-zinc-400"
+                }`}
+              />
+            );
           return (
             <Link
               key={i}

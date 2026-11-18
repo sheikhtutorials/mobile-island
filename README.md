@@ -36,7 +36,12 @@ git push -u origin main
 3. Click **Deploy**. Every later `git push` redeploys the site.
 4. In Supabase → **Authentication → URL Configuration**, set *Site URL* to your Vercel URL.
 
+## Updates (run once in the SQL Editor if your database was created earlier)
+- `supabase/update-mission-vision-links.sql` — Our Mission / Our Vision on the About page
+- `supabase/update-orders.sql` — Add to Cart orders + admin Orders page
+
 ## Notes
+- Orders: customers check out from `/cart`; prices are calculated in the database (`place_order`), not taken from the browser. Manage orders in **Admin → Orders**.
 - Seed images live in `public/seed/`. Replace them by uploading real photos in the admin panel.
 - WhatsApp number in Settings: digits only, with the country code (e.g. `923001234567`).
 - Map: on Google Maps, open **Share → Embed a map** and paste only the `src` URL into Settings.

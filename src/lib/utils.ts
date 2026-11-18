@@ -25,3 +25,10 @@ export function whatsappLink(settings: Settings | null, text?: string) {
   if (!num) return null;
   return `https://wa.me/${num}${text ? `?text=${encodeURIComponent(text)}` : ""}`;
 }
+
+export const ORDER_STATUS: Record<string, { label: string; cls: string }> = {
+  new: { label: "New", cls: "bg-sky-500/15 text-sky-400 ring-sky-500/30" },
+  confirmed: { label: "Confirmed", cls: "bg-amber-500/15 text-amber-400 ring-amber-500/30" },
+  delivered: { label: "Delivered", cls: "bg-emerald-500/15 text-emerald-400 ring-emerald-500/30" },
+  cancelled: { label: "Cancelled", cls: "bg-red-500/15 text-red-400 ring-red-500/30" },
+};

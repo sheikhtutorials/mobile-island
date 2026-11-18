@@ -5,6 +5,7 @@ import { ChevronLeft, Phone } from "lucide-react";
 import { ProductGallery } from "@/components/site/ProductGallery";
 import { ProductCard } from "@/components/site/ProductCard";
 import { WhatsAppIcon } from "@/components/site/Icons";
+import { AddToCartButton } from "@/components/site/AddToCartButton";
 import { getProductBySlug, getProducts, getSettings } from "@/lib/data";
 import { formatPrice, STOCK_LABELS, whatsappLink } from "@/lib/utils";
 
@@ -56,7 +57,10 @@ export default async function ProductPage({ params }: PageProps<"/products/[slug
           </div>
           <span className={`mt-3 inline-block rounded-md px-2.5 py-1 text-xs font-medium ring-1 ${stock.cls}`}>{stock.label}</span>
 
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-6">
+            <AddToCartButton product={product} />
+          </div>
+          <div className="mt-3 flex flex-col gap-3 sm:flex-row">
             {wa && (
               <a
                 href={wa}
@@ -105,19 +109,15 @@ export default async function ProductPage({ params }: PageProps<"/products/[slug
             <p className="truncate text-xs text-zinc-400">{product.name}</p>
             <p className="text-lg font-bold leading-tight">{price}</p>
           </div>
-          {settings?.phone && (
-            <a href={`tel:${settings.phone.replace(/[^\d+]/g, "")}`} aria-label="Call" className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-white/10 bg-white/5">
-              <Phone className="h-5 w-5" />
-            </a>
-          )}
+          <AddToCartButton product={product} variant="compact" />
           {wa && (
             <a
               href={wa}
               target="_blank"
               rel="noopener noreferrer"
-              className={`btn h-12 shrink-0 bg-emerald-500 px-4 text-white active:scale-95 ${soldOut ? "pointer-events-none opacity-50" : ""}`}
+              aria-label="Order on WhatsApp" className={`btn h-12 w-12 shrink-0 bg-emerald-500 p-0 text-white active:scale-95 ${soldOut ? "pointer-events-none opacity-50" : ""}`}
             >
-              <WhatsAppIcon /> {soldOut ? "Sold out" : "Order"}
+              <WhatsAppIcon />
             </a>
           )}
         </div>
