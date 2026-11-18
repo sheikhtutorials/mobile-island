@@ -17,6 +17,10 @@ export type Settings = {
   about_title: string | null;
   about_content: string | null;
   about_image_url: string | null;
+  mission_title: string | null;
+  mission_content: string | null;
+  vision_title: string | null;
+  vision_content: string | null;
   featured_title: string | null;
   footer_text: string | null;
   footer_credit: string | null;

@@ -43,6 +43,10 @@ const SECTIONS: { title: string; fields: FieldDef[] }[] = [
       { key: "about_title", label: "Heading", type: "text" },
       { key: "about_content", label: "Content", type: "textarea" },
       { key: "about_image_url", label: "Image", type: "image" },
+      { key: "mission_title", label: "Mission heading", type: "text" },
+      { key: "mission_content", label: "Mission text", type: "textarea" },
+      { key: "vision_title", label: "Vision heading", type: "text" },
+      { key: "vision_content", label: "Vision text", type: "textarea" },
     ],
   },
   {
