@@ -27,7 +27,7 @@ export function Footer({ settings }: { settings: Settings | null }) {
           <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-300">Visit Us</p>
           <ul className="space-y-2.5 text-sm text-zinc-400">
             {settings?.address && <li className="flex gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" />{settings.address}</li>}
-            {settings?.phone && <li className="flex gap-2"><Phone className="mt-0.5 h-4 w-4 shrink-0" /><a href={`tel:${settings.phone}`} className="hover:text-white">{settings.phone}</a></li>}
+            {settings?.phone && <li className="flex gap-2"><Phone className="mt-0.5 h-4 w-4 shrink-0" /><a href={`tel:${settings.phone.replace(/[^\d+]/g, "")}`} className="hover:text-white">{settings.phone}</a></li>}
             {settings?.email && <li className="flex gap-2"><Mail className="mt-0.5 h-4 w-4 shrink-0" /><a href={`mailto:${settings.email}`} className="hover:text-white">{settings.email}</a></li>}
             {settings?.opening_hours && <li className="flex gap-2"><Clock className="mt-0.5 h-4 w-4 shrink-0" />{settings.opening_hours}</li>}
           </ul>

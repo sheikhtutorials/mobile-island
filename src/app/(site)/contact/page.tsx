@@ -12,7 +12,7 @@ export default async function ContactPage() {
   const wa = whatsappLink(s, `Hi ${s?.site_name ?? ""}!`);
   const rows = [
     s?.address && { Icon: MapPin, label: "Address", value: s.address },
-    s?.phone && { Icon: Phone, label: "Phone", value: s.phone, href: `tel:${s.phone}` },
+    s?.phone && { Icon: Phone, label: "Phone", value: s.phone, href: `tel:${s.phone.replace(/[^\d+]/g, "")}` },
     s?.email && { Icon: Mail, label: "Email", value: s.email, href: `mailto:${s.email}` },
     s?.opening_hours && { Icon: Clock, label: "Hours", value: s.opening_hours },
   ].filter(Boolean) as { Icon: typeof MapPin; label: string; value: string; href?: string }[];

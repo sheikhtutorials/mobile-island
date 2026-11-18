@@ -69,7 +69,7 @@ export default async function ProductPage({ params }: PageProps<"/products/[slug
               </a>
             )}
             {settings?.phone && (
-              <a href={`tel:${settings.phone}`} className="btn-ghost py-3.5 text-base">
+              <a href={`tel:${settings.phone.replace(/[^\d+]/g, "")}`} className="btn-ghost py-3.5 text-base">
                 <Phone className="h-5 w-5" /> Call
               </a>
             )}
