@@ -19,18 +19,12 @@ export function Header({ settings }: { settings: Settings | null }) {
   const name = settings?.site_name || "";
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/5 bg-[#08080c]/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-white/5 bg-[#050913]/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          {settings?.logo_url ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={settings.logo_url} alt={name} className="h-9 w-auto max-w-[140px] object-contain" />
-          ) : (
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 text-sm font-black">
-              {name.slice(0, 1)}
-            </span>
-          )}
-          <span className="text-lg font-bold tracking-tight">{name}</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={settings?.logo_url || "/brand/logo-mark-light.png"} alt="" className="h-10 w-auto max-w-[120px] object-contain" />
+          <span className="text-lg font-bold tracking-tight sm:text-xl">{name}</span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">

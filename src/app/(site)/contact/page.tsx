@@ -32,13 +32,13 @@ export default async function ContactPage() {
           <div className="card divide-y divide-white/5">
             {rows.map(({ Icon, label, value, href }) => (
               <div key={label} className="flex gap-3 p-4">
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-violet-600/15 text-violet-400">
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-600/15 text-brand-400">
                   <Icon className="h-5 w-5" />
                 </span>
                 <div className="min-w-0">
                   <p className="text-xs uppercase tracking-wide text-zinc-500">{label}</p>
                   {href ? (
-                    <a href={href} className="break-words font-medium hover:text-violet-300">{value}</a>
+                    <a href={href} className="break-words font-medium hover:text-brand-300">{value}</a>
                   ) : (
                     <p className="break-words font-medium">{value}</p>
                   )}

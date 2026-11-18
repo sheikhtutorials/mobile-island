@@ -34,8 +34,8 @@ export default async function Dashboard() {
       <p className="mt-1 text-sm text-zinc-400">Everything on your website is managed from here.</p>
       <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
         {cards.map(({ label, value, href, Icon }) => (
-          <Link key={label} href={href} className="card p-4 transition hover:border-violet-500/40 sm:p-5">
-            <Icon className="h-5 w-5 text-violet-400" />
+          <Link key={label} href={href} className="card p-4 transition hover:border-brand-500/40 sm:p-5">
+            <Icon className="h-5 w-5 text-brand-400" />
             <p className="mt-3 text-3xl font-bold">{value}</p>
             <p className="text-sm text-zinc-400">{label}</p>
           </Link>

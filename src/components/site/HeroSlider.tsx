@@ -60,7 +60,7 @@ export function HeroSlider({ banners }: { banners: Banner[] }) {
               key={b.id}
               aria-label={`Slide ${idx + 1}`}
               onClick={() => setI(idx)}
-              className={`h-2 rounded-full transition-all ${idx === i ? "w-7 bg-violet-500" : "w-2 bg-white/25"}`}
+              className={`h-2 rounded-full transition-all ${idx === i ? "w-7 bg-brand-500" : "w-2 bg-white/25"}`}
             />
           ))}
         </div>

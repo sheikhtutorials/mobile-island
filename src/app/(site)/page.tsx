@@ -34,7 +34,7 @@ export default async function HomePage() {
       <section className="mx-auto max-w-7xl px-4 pt-10">
         <div className="mb-5 flex items-end justify-between">
           <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">{settings?.featured_title}</h2>
-          <Link href="/products" className="flex items-center gap-1 text-sm font-medium text-violet-400 hover:text-violet-300">
+          <Link href="/products" className="flex items-center gap-1 text-sm font-medium text-brand-400 hover:text-brand-300">
             View all <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -57,7 +57,7 @@ export default async function HomePage() {
               <Link
                 key={b.id}
                 href={`/products?brand=${b.slug}`}
-                className="card flex aspect-[3/2] items-center justify-center p-4 text-center font-semibold transition hover:border-violet-500/40 hover:bg-white/[0.06]"
+                className="card flex aspect-[3/2] items-center justify-center p-4 text-center font-semibold transition hover:border-brand-500/40 hover:bg-white/[0.06]"
               >
                 {b.logo_url ? (
                   // eslint-disable-next-line @next/next/no-img-element

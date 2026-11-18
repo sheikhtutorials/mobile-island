@@ -169,7 +169,7 @@ export function FieldInput({
   if (f.type === "checkbox")
     return (
       <label className="flex cursor-pointer items-center gap-3">
-        <input type="checkbox" checked={!!value} onChange={(e) => onChange(e.target.checked)} className="h-5 w-5 accent-violet-600" />
+        <input type="checkbox" checked={!!value} onChange={(e) => onChange(e.target.checked)} className="h-5 w-5 accent-brand-600" />
         <span className="text-sm">{f.label}</span>
       </label>
     );

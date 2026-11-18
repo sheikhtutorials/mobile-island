@@ -37,7 +37,7 @@ export function ImageField({
       <button
         type="button"
         onClick={() => input.current?.click()}
-        className="grid h-24 w-24 shrink-0 place-items-center overflow-hidden rounded-xl border border-dashed border-white/20 bg-white/5 text-zinc-400 hover:border-violet-500"
+        className="grid h-24 w-24 shrink-0 place-items-center overflow-hidden rounded-xl border border-dashed border-white/20 bg-white/5 text-zinc-400 hover:border-brand-500"
       >
         {busy ? (
           <Loader2 className="h-6 w-6 animate-spin" />
@@ -113,11 +113,11 @@ export function MultiImageField({
           <div key={src + i} className="group relative aspect-square overflow-hidden rounded-xl border border-white/10 bg-zinc-900">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={src} alt="" className="h-full w-full object-cover" />
-            {i === 0 && <span className="absolute left-1 top-1 rounded bg-violet-600 px-1.5 text-[10px] font-bold">COVER</span>}
+            {i === 0 && <span className="absolute left-1 top-1 rounded bg-brand-600 px-1.5 text-[10px] font-bold">COVER</span>}
             <div className="absolute inset-x-0 bottom-0 flex justify-between bg-black/70 p-1">
-              <button type="button" onClick={() => move(i, -1)} className="p-1 hover:text-violet-300" aria-label="Move left"><ArrowLeft className="h-4 w-4" /></button>
+              <button type="button" onClick={() => move(i, -1)} className="p-1 hover:text-brand-300" aria-label="Move left"><ArrowLeft className="h-4 w-4" /></button>
               <button type="button" onClick={() => onChange(value.filter((_, k) => k !== i))} className="p-1 text-red-400" aria-label="Remove"><Trash2 className="h-4 w-4" /></button>
-              <button type="button" onClick={() => move(i, 1)} className="p-1 hover:text-violet-300" aria-label="Move right"><ArrowRight className="h-4 w-4" /></button>
+              <button type="button" onClick={() => move(i, 1)} className="p-1 hover:text-brand-300" aria-label="Move right"><ArrowRight className="h-4 w-4" /></button>
             </div>
           </div>
         ))}
@@ -125,7 +125,7 @@ export function MultiImageField({
           type="button"
           onClick={() => input.current?.click()}
           disabled={busy}
-          className="grid aspect-square place-items-center rounded-xl border border-dashed border-white/20 bg-white/5 text-zinc-400 hover:border-violet-500"
+          className="grid aspect-square place-items-center rounded-xl border border-dashed border-white/20 bg-white/5 text-zinc-400 hover:border-brand-500"
         >
           {busy ? <Loader2 className="h-6 w-6 animate-spin" /> : <ImagePlus className="h-6 w-6" />}
         </button>

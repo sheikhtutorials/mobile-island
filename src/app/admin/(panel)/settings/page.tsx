@@ -102,7 +102,7 @@ export default function SettingsAdmin() {
           </section>
         ))}
       </div>
-      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-white/10 bg-[#08080c]/90 p-3 backdrop-blur lg:left-64">
+      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-white/10 bg-[#050913]/90 p-3 backdrop-blur lg:left-64">
         <div className="mx-auto flex max-w-3xl justify-end">
           <button className="btn-primary w-full sm:w-auto" disabled={saving}>
             {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />} Save settings

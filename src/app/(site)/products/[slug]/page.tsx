@@ -42,7 +42,7 @@ export default async function ProductPage({ params }: PageProps<"/products/[slug
 
         <div>
           <div className="flex flex-wrap items-center gap-2 text-xs">
-            {product.brand && <span className="font-semibold uppercase tracking-wider text-violet-400">{product.brand.name}</span>}
+            {product.brand && <span className="font-semibold uppercase tracking-wider text-brand-400">{product.brand.name}</span>}
             {product.category && <span className="rounded-md bg-white/5 px-2 py-0.5 text-zinc-400">{product.category.name}</span>}
           </div>
           <h1 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">{product.name}</h1>

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Loader2, Lock } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
 
 export default function LoginPage() {
@@ -30,7 +30,8 @@ export default function LoginPage() {
     <div className="grid min-h-screen place-items-center px-4">
       <form onSubmit={submit} className="card w-full max-w-sm space-y-4 p-6">
         <div className="mb-2 flex flex-col items-center text-center">
-          <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-violet-500 to-indigo-600"><Lock className="h-5 w-5" /></span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/brand/logo-mark-light.png" alt="" className="h-16 w-auto" />
           <h1 className="mt-3 text-xl font-bold">Admin Login</h1>
           <p className="text-sm text-zinc-400">Sign in to manage your store</p>
         </div>

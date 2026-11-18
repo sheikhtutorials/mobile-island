@@ -12,11 +12,10 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: { default: name, template: `%s | ${name}` },
     description: s?.tagline || undefined,
-    icons: s?.logo_url ? { icon: s.logo_url } : undefined,
   };
 }
 
-export const viewport: Viewport = { themeColor: "#08080c" };
+export const viewport: Viewport = { themeColor: "#050913" };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (

@@ -23,7 +23,7 @@ export function ProductFilters({ categories, brands }: { categories: Category[];
 
   const chip = (active: boolean) =>
     `shrink-0 rounded-full px-4 py-2 text-sm font-medium transition ring-1 ${
-      active ? "bg-violet-600 text-white ring-violet-500" : "bg-white/5 text-zinc-300 ring-white/10 hover:bg-white/10"
+      active ? "bg-brand-600 text-white ring-brand-500" : "bg-white/5 text-zinc-300 ring-white/10 hover:bg-white/10"
     }`;
 
   return (

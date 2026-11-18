@@ -19,7 +19,7 @@ export function ProductGallery({ images, name }: { images: string[]; name: strin
               key={src + i}
               onClick={() => setActive(i)}
               className={`h-16 w-16 shrink-0 overflow-hidden rounded-xl ring-2 transition sm:h-20 sm:w-20 ${
-                i === active ? "ring-violet-500" : "ring-transparent opacity-60 hover:opacity-100"
+                i === active ? "ring-brand-500" : "ring-transparent opacity-60 hover:opacity-100"
               }`}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}

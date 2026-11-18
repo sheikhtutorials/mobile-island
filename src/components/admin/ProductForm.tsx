@@ -218,18 +218,18 @@ export function ProductForm({ id }: { id: string }) {
               <input className="input" type="number" value={form.sort_order} onChange={(e) => set("sort_order", Number(e.target.value) || 0)} />
             </div>
             <label className="flex cursor-pointer items-center gap-3">
-              <input type="checkbox" className="h-5 w-5 accent-violet-600" checked={form.is_featured} onChange={(e) => set("is_featured", e.target.checked)} />
+              <input type="checkbox" className="h-5 w-5 accent-brand-600" checked={form.is_featured} onChange={(e) => set("is_featured", e.target.checked)} />
               <span className="text-sm">Featured on homepage</span>
             </label>
             <label className="flex cursor-pointer items-center gap-3">
-              <input type="checkbox" className="h-5 w-5 accent-violet-600" checked={form.is_active} onChange={(e) => set("is_active", e.target.checked)} />
+              <input type="checkbox" className="h-5 w-5 accent-brand-600" checked={form.is_active} onChange={(e) => set("is_active", e.target.checked)} />
               <span className="text-sm">Visible on website</span>
             </label>
           </section>
         </div>
       </div>
 
-      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-white/10 bg-[#08080c]/90 p-3 backdrop-blur lg:left-64">
+      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-white/10 bg-[#050913]/90 p-3 backdrop-blur lg:left-64">
         <div className="mx-auto flex max-w-4xl justify-end gap-2">
           <Link href="/admin/products" className="btn-ghost">Cancel</Link>
           <button className="btn-primary" disabled={saving}>
