@@ -32,7 +32,7 @@ export default async function ProductPage({ params }: PageProps<"/products/[slug
     : [];
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-6 sm:py-10">
+    <div className="mx-auto max-w-7xl px-4 py-4 sm:py-10">
       <Link href="/products" className="mb-5 inline-flex items-center gap-1 text-sm text-zinc-400 hover:text-white">
         <ChevronLeft className="h-4 w-4" /> Back to products
       </Link>
@@ -45,7 +45,7 @@ export default async function ProductPage({ params }: PageProps<"/products/[slug
             {product.brand && <span className="font-semibold uppercase tracking-wider text-brand-400">{product.brand.name}</span>}
             {product.category && <span className="rounded-md bg-white/5 px-2 py-0.5 text-zinc-400">{product.category.name}</span>}
           </div>
-          <h1 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">{product.name}</h1>
+          <h1 className="mt-2 text-2xl font-extrabold tracking-tight sm:text-4xl">{product.name}</h1>
           {product.short_description && <p className="mt-2 text-zinc-400">{product.short_description}</p>}
 
           <div className="mt-5 flex flex-wrap items-end gap-3">
@@ -94,6 +94,31 @@ export default async function ProductPage({ params }: PageProps<"/products/[slug
                 ))}
               </dl>
             </div>
+          )}
+        </div>
+      </div>
+
+      {/* Mobile sticky order bar */}
+      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-[#050913]/95 px-4 pb-[calc(0.75rem+env(safe-area-inset-bottom))] pt-3 backdrop-blur-xl md:hidden">
+        <div className="flex items-center gap-3">
+          <div className="min-w-0 flex-1">
+            <p className="truncate text-xs text-zinc-400">{product.name}</p>
+            <p className="text-lg font-bold leading-tight">{price}</p>
+          </div>
+          {settings?.phone && (
+            <a href={`tel:${settings.phone.replace(/[^\d+]/g, "")}`} aria-label="Call" className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-white/10 bg-white/5">
+              <Phone className="h-5 w-5" />
+            </a>
+          )}
+          {wa && (
+            <a
+              href={wa}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`btn h-12 shrink-0 bg-emerald-500 px-4 text-white active:scale-95 ${soldOut ? "pointer-events-none opacity-50" : ""}`}
+            >
+              <WhatsAppIcon /> {soldOut ? "Sold out" : "Order"}
+            </a>
           )}
         </div>
       </div>

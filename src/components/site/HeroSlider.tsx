@@ -34,17 +34,17 @@ export function HeroSlider({ banners }: { banners: Banner[] }) {
       >
         {banners.map((b) => (
           <div key={b.id} className="relative w-full shrink-0 snap-center">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl bg-zinc-900 sm:aspect-[16/7]">
+            <div className="relative aspect-[5/4] w-full overflow-hidden rounded-3xl bg-zinc-900 sm:aspect-[16/7]">
               {b.image_url && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={b.image_url} alt={b.title || ""} className="absolute inset-0 h-full w-full object-cover" />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent sm:bg-gradient-to-r sm:from-black/75 sm:via-black/30" />
-              <div className="absolute inset-x-0 bottom-0 p-6 sm:inset-y-0 sm:flex sm:max-w-xl sm:flex-col sm:justify-center sm:p-12">
-                {b.title && <h1 className="text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl">{b.title}</h1>}
-                {b.subtitle && <p className="mt-3 text-sm text-zinc-200 sm:text-lg">{b.subtitle}</p>}
+              <div className="absolute inset-x-0 bottom-0 p-5 sm:inset-y-0 sm:flex sm:max-w-xl sm:flex-col sm:justify-center sm:p-12">
+                {b.title && <h1 className="text-2xl font-extrabold leading-tight tracking-tight sm:text-5xl">{b.title}</h1>}
+                {b.subtitle && <p className="mt-2 line-clamp-2 text-sm text-zinc-200 sm:mt-3 sm:line-clamp-none sm:text-lg">{b.subtitle}</p>}
                 {b.cta_text && b.cta_link && (
-                  <Link href={b.cta_link} className="btn mt-6 w-fit bg-white px-6 py-3 text-black hover:bg-zinc-200">
+                  <Link href={b.cta_link} className="btn mt-4 w-fit bg-white px-5 py-2.5 sm:mt-6 sm:px-6 sm:py-3 text-black hover:bg-zinc-200">
                     {b.cta_text}
                   </Link>
                 )}
